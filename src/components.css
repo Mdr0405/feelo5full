@@ -1,0 +1,118 @@
+.FeelO5{
+    background-image: url('https://images.hdqwalls.com/download/colorful-night-stars-kp-3840x2160.jpg');
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    /* flex-direction: row; */
+    min-height: 100vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: aquamarine;
+    position: relative;
+  }
+  
+  
+.Home{
+    display: flex;
+    position: relative;
+}
+
+.Top{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    left: 0;
+    width: 100vw;
+    /* left: 45rem; */
+    gap: 2rem;
+}
+
+.Main-Content{
+    margin-left: 10rem;
+    padding-left: 1rem;
+}
+.SearchBar{
+    display: flex;
+    background-color: rgba(246, 246, 246, 0.7);
+    border-radius: 10px;
+    height: 2rem;
+    width: 15rem;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+.Search-Icon{
+    font-size: 1.2rem;
+    color: black;
+    margin-right: 0.6rem;
+    padding-left: .4rem;
+}
+
+.SearchBar input{
+    flex: 1; /* Input takes up remaining space */
+    border: none;
+    background: transparent;
+    color: black;
+    font-size: 1rem;
+    outline: none;    
+}
+
+.Home-Icon{
+    color: aqua;
+    font-size: 3rem;
+    animation: transform 0.3s ease;
+}
+
+.Home-Icon:hover{
+    transform: scale(1.1);
+}
+
+.Playlist{
+   display: flex;
+   position: absolute;
+   left: 30%;
+   top:30%;
+
+}
+.play{
+    width: 12rem;
+    height: auto;
+    margin: 1.5rem;
+}
+
+.Play-head{
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+}
+.Library{
+   position: fixed;
+   min-height: 100vh;
+   width:7rem;
+   border-right: 2px dotted orange;
+   left:0;
+   top:0;
+   overflow-y: auto;
+   padding: 1rem;
+}
+
+.Player{
+    position: fixed;
+    min-width: 100vw;
+    height: 5rem;
+    left:0;
+    bottom:0;
+    border-top: 2px dotted orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+.Player-Icons{
+    font-size: 2rem;
+}

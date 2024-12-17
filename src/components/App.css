@@ -1,0 +1,199 @@
+/* General Body and FeelO5 Styles */
+.FeelO5 {
+  background-image: url('https://images.hdqwalls.com/download/colorful-night-stars-kp-3840x2160.jpg');
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: rgb(255, 255, 255);
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* Top Navigation Bar */
+.Top {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content:space-around;
+  top: 0;
+  z-index: 1000;
+  padding: 0.5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* gap: 20px; */
+  color: aqua;
+}
+
+.Home-Icon {
+  font-size: 2rem;
+  margin: 1rem;
+  color: aliceblue;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.Home-Icon:hover {
+  transform: scale(1.2);
+  color: aqua;
+}
+
+.Playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 11rem 0 10rem; /* Ensures spacing from top and bottom (player) */
+  width: 100%;
+}
+
+.p1 {
+  margin: 0.5rem;
+  width: 10rem;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.p1:hover {
+  transform: scale(1.1);
+}
+
+.Playlist-Details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem; /* Leave space below the search bar */
+  padding-bottom: 2rem; 
+  width: 100%; /* Keep it responsive */
+  max-height: calc(100vh - 12rem); /* Limit height relative to viewport */
+  overflow-y: auto; /* Allow scrolling for overflowing results */
+  background-color: rgba(0, 0, 0, 0.8); /* Consistent background */
+  color: white; /* Text color for readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+/* Song List & Cards */
+.Song-List {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0 7rem; /* Prevents overlap with player */
+  gap: 1rem;
+  padding-bottom: 5rem; /* Ensures the last item is visible */
+}
+
+.Song-Card {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 90%;
+  max-width: 500px;
+}
+
+.Song-Card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.Song-Card p {
+  margin: 0.3rem 0;
+}
+
+.Song-Card button {
+  align-self: flex-end;
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Song-Card button:hover {
+  background-color: darkorange;
+}
+
+/* Player */
+.Player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-top: 2px dotted orange;
+  z-index: 999;
+}
+
+/* Search Bar */
+.SearchBar {
+  position: absolute; /* Changed from fixed to absolute for better control */
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: rgba(246, 246, 246, 0.7);
+  border-radius: 10px;
+  height: 2.5rem;
+  width: 20rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Added subtle shadow for visibility */
+}
+
+.SearchBar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  outline: none;
+}
+
+.SearchBar button {
+  border: none;
+  background-color: aqua;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.SearchBar button:hover {
+  background-color: darkcyan;
+}
+
+/* Search Results */
+.Search-Results {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 42rem; /* Leave space below the search bar */
+  padding: 1rem;
+  width: 90%; /* Keep it responsive */
+  max-height: calc(100vh - 12rem); /* Limit height relative to viewport */
+  overflow-y: auto; /* Allow scrolling for overflowing results */
+  background-color: rgba(0, 0, 0, 0.8); /* Consistent background */
+  color: white; /* Text color for readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
