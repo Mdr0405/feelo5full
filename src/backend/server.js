@@ -10,7 +10,7 @@
     app.use(express.json());
 
     // MongoDB Connection
-    mongoose.connect( "mongodb+srv://fayriz0304:5317ba91@roomdetails.ishsgv5.mongodb.net/"
+    mongoose.connect( "mongodb+srv://fayriz0304:5317ba91@roomdetails.ishsgv5.mongodb.net/?retryWrites=true&w=majority&appName=RoomDetails"
             , { useNewUrlParser: true,useUnifiedTopology: true })
         .then(() => console.log('Connected to MongoDB'))
         .catch((err) => console.error('MongoDB connection error:', err));

@@ -6,7 +6,7 @@ function SearchBar({ onPlay }) {
   const [songs,setSongs]=useState(['']);
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`https://feelo5.onrender.com/api/search?query=${searchQuery}`);
+      const response = await axios.get(`http://localhost:5000/api/search?query=${searchQuery}`);
       console.log(setSongs(response.data)); 
 
     } catch (error) {
