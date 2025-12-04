@@ -13,7 +13,7 @@ const PlaylistDetails = ({ onPlay }) => {
     //fetch playlist details
     const fetchPlaylist = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/playlist/${playlistId}`);
+            const response = await axios.get(`https://feelo5full.onrender.com/api/playlist/${playlistId}`);
             setPlaylist(response.data);
         } catch (error) {
             console.error('Error fetching playlist:', error);
@@ -23,7 +23,7 @@ const PlaylistDetails = ({ onPlay }) => {
     // Fetch all songs from the database
     const fetchAllSongs = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/songs');
+            const response = await axios.get('https://feelo5full.onrender.com/api/songs');
             setAllSongs(response.data);
         } catch (error) {
             console.error('Error fetching songs:', error);
@@ -33,7 +33,7 @@ const PlaylistDetails = ({ onPlay }) => {
     // Add selected songs to the playlist
     const addSongsToPlaylist = async () => {
         try {
-            const response = await axios.put(`http://localhost:5000/api/playlist/${playlistId}/add-songs`, {
+            const response = await axios.put(`https://feelo5full.onrender.com/api/playlist/${playlistId}/add-songs`, {
                 songIds: selectedSongs,
             });
             setPlaylist(response.data.playlist);

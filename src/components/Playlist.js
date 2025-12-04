@@ -9,7 +9,7 @@ const PlaylistManager = ()=>{
     const createPlaylist = async ()=>{
         const userId=12345;
         const songs=[];
-        const response=await axios.post('http://localhost:5000/api/playlist',{userId, name:playlist, songs});
+        const response=await axios.post('https://feelo5full.onrender.com/api/playlist',{userId, name:playlist, songs});
         console.log(response.data);
         alert("Playlist has created");
     };
@@ -17,7 +17,7 @@ const PlaylistManager = ()=>{
     //fetchplaylist
     const fetchplaylist= async()=>{
         const userId=12345;
-        const response= await axios.get(`http://localhost:5000/api/playlist/user/${userId}`);
+        const response= await axios.get(`https://feelo5full.onrender.com/api/playlist/user/${userId}`);
         console.log(setfetch(response.data)); 
     }
     useEffect(()=>{
