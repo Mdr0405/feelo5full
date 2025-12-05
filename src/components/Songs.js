@@ -7,8 +7,7 @@ const [songs, setSongs] = useState([]);
 
 useEffect(() => {
   // Fetch the songs from the backend
-  axios.get("https://feelo5full.onrender.com/api/songs").
-  then((response) => {
+  axios.get("https://feelo5full.onrender.com/api/songs").then((response) => {
       setSongs(response.data);
     })
     .catch((error) => {

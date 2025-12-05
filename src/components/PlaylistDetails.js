@@ -11,7 +11,7 @@ const PlaylistDetails = ({ onPlay }) => {
     const [selectedSongs, setSelectedSongs] = useState([]); // To track selected songs
 
     //fetch playlist details
-    const fetchPlaylist = async () => {
+    const fetchPlaylist = async (playlistId) => {
         try {
             const response = await axios.get(`https://feelo5full.onrender.com/api/playlist/${playlistId}`);
             setPlaylist(response.data);
